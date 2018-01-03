@@ -10,5 +10,8 @@ gscholar: 0PlA9CsAAAAJ
 linkedin: christoph-schorn
 xing: christoph-schorn
 
+# Variables
+resumepath: /pdf/Resume_Christoph_Schorn.pdf
+
 # Build settings
 markdown: kramdown

@@ -1410,6 +1410,12 @@ header .logo a {
 	position: relative;
 	left: 1.2rem;
 }
+.intro-content .intro-text {
+    font-family: "lora-regular", serif;
+    font-size: 2rem;
+    line-height: 1.8;
+    color: #999999;
+}
 
 .intro-social {
 	display: block;
@@ -1718,6 +1724,23 @@ header .logo a {
 	position: absolute;
 	left: 0;
 	bottom: 0;
+}
+#resume object.pdf {
+  	$pdfsize: 90%;
+	width: $pdfsize;
+	height: $pdfsize;
+	min-height: 750px;
+  	margin-bottom: 30px;
+
+	iframe {
+		width: $pdfsize;
+		height: $pdfsize;
+		border: none;
+	}
+}
+#resume iframe.pdf {
+	width: 80%;
+	min-height: 800px;
 }
 
 /**
