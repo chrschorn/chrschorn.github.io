@@ -42,6 +42,17 @@ $primary-color: #0066cc;
 $primary-color-dark: #003b76;
 $button-color: #005bb4;
 
+@mixin button-arrow {
+	display: inline-block;
+	content: "\f107";
+	font-family: fontAwesome;
+	font-size: 1.6rem;
+	line-height: inherit;
+	text-align: center;
+	position: relative;
+	left: 1.2rem;
+}
+
 
 /** 
  * ===================================================================
@@ -1401,14 +1412,7 @@ header .logo a {
 	border-color: $button-color;
 }
 .intro-content .button::after {
-	display: inline-block;
-	content: "\f107";
-	font-family: fontAwesome;
-	font-size: 1.6rem;
-	line-height: inherit;
-	text-align: center;
-	position: relative;
-	left: 1.2rem;
+  	@include button-arrow();
 }
 .intro-content .intro-text {
     font-family: "lora-regular", serif;
@@ -1572,6 +1576,12 @@ header .logo a {
 }
 .about-content .skill-bars {
 	margin-top: 6rem;
+}
+#about a.button.smoothscroll::after {
+	@include button-arrow();
+}
+#about a.button.resume {
+	background: $primary-color;
 }
 
 .button-section {
