@@ -22,7 +22,14 @@
 
       });       
 
-  	})
+  	});
+
+
+   /* Insert email & phone */
+    var email = "christoph" + "." + "schorn" + "@" + "gmail.com";
+
+	$("a.insertemail").html(email).attr('href', 'mailto:' + email);
+	$("a.insertmailto").attr('href', 'mailto:' + email);
 
 
   	/*---------------------------------------------------- */
@@ -211,7 +218,6 @@
   	/*---------------------------------------------------- */
 	/*	contact form
 	------------------------------------------------------ */
-	var email = "christoph" + "." + "schorn" + "@" + "gmail.com"
 
 	/* local validation */
 	$('#contactForm').validate({
