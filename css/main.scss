@@ -1725,23 +1725,19 @@ header .logo a {
 	left: 0;
 	bottom: 0;
 }
-#resume object.pdf {
-  	$pdfsize: 90%;
-	width: $pdfsize;
-	height: $pdfsize;
-	min-height: 750px;
-  	margin-bottom: 30px;
+#resume div.pdf {
+	margin-top: 30px;
+}
+#resume div.pdfobject-container {
+	height: 750px;
+	width: 90%;
+    margin-left: auto;
+	margin-right: auto;
+}
+#resume a.download {
+	background: $primary-color;
+}
 
-	iframe {
-		width: $pdfsize;
-		height: $pdfsize;
-		border: none;
-	}
-}
-#resume iframe.pdf {
-	width: 80%;
-	min-height: 800px;
-}
 
 /**
  * responsive:

@@ -1,4 +1,4 @@
-/** 
+/**
  * ===================================================================
  * main js
  *
@@ -263,9 +263,21 @@
 	});
 
 
+    /*----------------------------------------------------- */
+    /* PDF
+    ------------------------------------------------------- */
+    PDFObject.embed("/pdf/Resume_Christoph_Schorn.pdf", "#resume div.pdf", {
+        fallbackLink: "Your browser does not support inline PDFs. Please download the PDF to view it!",
+    	pdfOpenParams: {
+			view: 'FitV',
+            pagemode: 'none'
+        }
+    });
+
+
  	/*----------------------------------------------------- */
   	/* Back to top
-   ------------------------------------------------------- */
+    ------------------------------------------------------- */
 	var pxShow = 300; // height on which the button will show
 	var fadeInTime = 400; // how slow/fast you want the button to show
 	var fadeOutTime = 400; // how slow/fast you want the button to hide

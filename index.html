@@ -19,7 +19,7 @@ layout: home
     <div class="row button-section">
         <div class="col-twelve">
             <a href="#contact" title="Contact Me" class="button stroke smoothscroll">Contact Me</a>
-            <a href="#resume" title="View Resume" class="button smoothscroll button-primary">Download Resume</a>
+            <a href="#resume" title="View Resume" class="button smoothscroll button-primary">View Resume</a>
         </div>
     </div>
 
@@ -37,16 +37,12 @@ layout: home
 
             <p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
 
-            <object class="pdf" data="{{ site.resumepath }}#pagemode=none&Fit" type="application/pdf">
-                <iframe src="{{ site.resumepath }}#pagemode=none&Fit">
-                    This browser does not support PDFs. Please download the PDF to view it: <a href="{{ site.resumepath }}#pagemode=none&Fit">Download PDF</a>
-                </iframe>
-            </object>
-
-            <a class="button button-primary" href="{{ site.resumepath }}" title="Download Resume" download="Resume_Christoph_Schorn">
+            <a class="button button-primary download" href="{{ site.resumepath }}" title="Download Resume" download="Resume_Christoph_Schorn">
                 Download Resume <i class="fa fa-download"></i>
             </a>
-            <!--<iframe class="pdf" src="https://drive.google.com/file/d/0B2sbqTi58q93Uzg1T1kwUHlfbXM/preview" width="640" height="480"></iframe>-->
+
+            <div class="pdf"></div>
+
         </div>
     </div> <!-- /section-intro-->
 
