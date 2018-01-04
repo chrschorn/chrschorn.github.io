@@ -215,6 +215,7 @@
   	/*---------------------------------------------------- */
 	/*	contact form
 	------------------------------------------------------ */
+	var email = "christoph" + "." + "schorn" + "@" + "gmail.com"
 
 	/* local validation */
 	$('#contactForm').validate({
@@ -224,42 +225,43 @@
 
 			var sLoader = $('#submit-loader');
 
-			$.ajax({      	
+			$.ajax({
 
 		      type: "POST",
-		      url: "inc/sendEmail.php",
+		      url: "https://formspree.io/" + email,
 		      data: $(form).serialize(),
-		      beforeSend: function() { 
+			  dataType: "json",
+		      beforeSend: function() {
 
-		      	sLoader.fadeIn(); 
+		      	sLoader.fadeIn();
 
 		      },
 		      success: function(msg) {
 
 	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
+	            if (msg.success == 'email sent') {
+	            	sLoader.fadeOut();
 	               $('#message-warning').hide();
 	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
+	               $('#message-success').fadeIn();
 	            }
 	            // There was an error
 	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
+	            	sLoader.fadeOut();
+	                $('#message-warning').html("Something went wrong. Please try again.");
 		            $('#message-warning').fadeIn();
 	            }
 
 		      },
 		      error: function() {
 
-		      	sLoader.fadeOut(); 
+		      	sLoader.fadeOut();
 		      	$('#message-warning').html("Something went wrong. Please try again.");
 		         $('#message-warning').fadeIn();
 
 		      }
 
-	      });     		
+	      });
   		}
 
 	});
@@ -267,7 +269,7 @@
 
  	/*----------------------------------------------------- */
   	/* Back to top
-   ------------------------------------------------------- */ 
+   ------------------------------------------------------- */
 	var pxShow = 300; // height on which the button will show
 	var fadeInTime = 400; // how slow/fast you want the button to show
 	var fadeOutTime = 400; // how slow/fast you want the button to hide
@@ -284,8 +286,8 @@
 				jQuery("#go-top").fadeOut(fadeOutTime);
 			}
 
-		}		
+		}
 
-	});		
+	});
 
 })(jQuery);
