@@ -1139,12 +1139,11 @@ header .logo a {
 	margin: 0;
 	padding: 0;
 	border: none;
-	font-family: "poppins-bold", sans-serif;
+	font-family: "poppins-semibold", sans-serif;
   	font-size: 15px;
     text-transform: uppercase;
 	letter-spacing: 4px;
-	text-shadow: 0 0 0.1px white;
-	color: transparent;
+	color: white;
 }
 
 /**
@@ -1283,13 +1282,6 @@ header .logo a {
 .main-navigation li.current > a {
 	background: none;
 	color: $primary-color;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	/* IE10+ CSS styles go here */
-	header .logo a {
-		text-shadow: none;
-		text-color: white;
-	}
 }
 
 /**
