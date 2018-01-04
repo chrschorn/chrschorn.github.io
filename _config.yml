@@ -15,3 +15,7 @@ resumepath: /pdf/Resume_Christoph_Schorn.pdf
 
 # Build settings
 markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
