@@ -38,7 +38,7 @@
  *
  * -------------------------------------------------------------------
  */
-$primary-color: #0066CC;
+$primary-color: #0066cc;
 $primary-color-dark: #003b76;
 $button-color: #005bb4;
 
@@ -1113,13 +1113,13 @@ header .top-bar {
 	min-width: 220px;
 	min-height: 66px;
 	position: absolute;
-	left: 90px;
+	right: 90px;
 	top: 0;
 }
 header .logo {
-	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
+	float: right;
+	margin-left: 50px;
+	margin-right: 20px;
 	margin-top: 25px;
 	position: relative;
 }
@@ -1142,10 +1142,10 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 .menu-toggle {
-	float: left;
+	float: right;
 	width: 40px;
 	height: 40px;
-	margin-left: 20px;
+	margin-right: 20px;
 	margin-top: 13px;
 	display: block;
 	position: relative;
@@ -1244,7 +1244,7 @@ header .logo a {
 /* dropdown nav */
 .main-navigation {
 	background: #000000;
-	padding: 24px 30px 42px;
+	padding: 24px 30px 30px;
 	margin: 0;
 	width: 100%;
 	height: auto;
@@ -1254,7 +1254,7 @@ header .logo a {
 .main-navigation > li {
 	display: block;
 	height: auto;
-	text-align: left;
+	text-align: right;
 	padding: 0;
 }
 .main-navigation li a {
@@ -1281,22 +1281,22 @@ header .logo a {
  */
 @media only screen and (max-width:1024px) {
 	header .top-bar {
-		left: 60px;
+		right: 60px;
 	}
 }
 @media only screen and (max-width:768px) {
 	header .top-bar {
-		left: 50px;
+		right: 50px;
 	}
 }
 @media only screen and (max-width:600px) {
 	header .top-bar {
-		left: 35px;
+		right: 35px;
 	}
 }
 @media only screen and (max-width:400px) {
 	header .top-bar {
-		left: 25px;
+		right: 25px;
 	}
 }
 
@@ -1465,7 +1465,7 @@ header .logo a {
 	.intro-content h5 {
 		font-size: 1.8rem;
 	}
-	.intro-content .intro-position {
+	.intro-content .intro-position, .intro-content .intro-text {
 		font-size: 1.3rem;
 	}
 	.intro-social {
@@ -1488,7 +1488,7 @@ header .logo a {
 		margin-bottom: .3rem;
 		letter-spacing: .2rem;
 	}
-	.intro-content .intro-position {
+	.intro-content .intro-position, .intro-content .intro-text {
 		font-size: 1.2rem;
 	}
 	.intro-content .intro-position span {
