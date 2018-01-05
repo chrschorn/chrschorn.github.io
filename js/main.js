@@ -269,18 +269,6 @@
 	});
 
 
-    /*----------------------------------------------------- */
-    /* PDF
-    ------------------------------------------------------- */
-    // PDFObject.embed("Resume_Christoph_Schorn.pdf", "#resume div.pdf", {
-    //     fallbackLink: "Your browser does not support showing the PDF resume here. Please download it to view!",
-    // 	pdfOpenParams: {
-		// 	view: 'FitV',
-    //         pagemode: 'none'
-    //     }
-    // });
-
-
  	/*----------------------------------------------------- */
   	/* Back to top
     ------------------------------------------------------- */
