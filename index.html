@@ -40,13 +40,21 @@ layout: home
 
             <p class="lead">In this compact one-page resume, you can find some of my most defining achievements, projects and experiences.</p>
 
-            <a class="button button-primary download" href="{{ site.resumepath }}" title="Download Resume" download="Resume_Christoph_Schorn">
+        </div>
+    </div> <!-- /section-intro-->
+
+    <div class="row resume-content">
+        <div class="col-twelve">
+
+            <a class="button button-primary download" href="https://drive.google.com/uc?export=download&id={{ site.resumeid }}" title="Download Resume" download="Resume_Christoph_Schorn">
                 Download Resume <i class="fa fa-download"></i>
             </a>
 
-            <div class="pdf"></div>
+            <div class="pdf">
+                <iframe src="https://drive.google.com/file/d/{{ site.resumeid }}/preview"></iframe>
+            </div>
 
         </div>
-    </div> <!-- /section-intro-->
+    </div>
 
 </section> <!-- /features -->

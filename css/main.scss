@@ -1735,7 +1735,29 @@ header .logo a {
 	bottom: 0;
 }
 #resume div.pdf {
+	width: 100%;
+	position: relative;
 	margin-top: 30px;
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 140%;
+	}
+
+	iframe {
+      	width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+.resume-content {
+	text-align: center;
+	max-width: 880px;
 }
 #resume div.pdfobject-container {
 	height: 750px;
