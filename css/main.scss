@@ -1441,6 +1441,14 @@ header .logo a {
 .intro-social li a:hover, .intro-social li a:focus {
 	color: $button-color;
 }
+.intro-content a.button.button-primary.error404 {
+	background: $primary-color;
+  	height: 5.2rem !important;
+
+	&:after {
+		content: "";
+	}
+}
 
 /**
  * responsive:

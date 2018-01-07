@@ -18,15 +18,14 @@
                 </p>
 
 
-                <p class="intro-text">
                 {% if page.error404 %}
-                    You found page that doesn't exists!<br><br>404 Error
+                    <p class="intro-text"> You found page that doesn't exists!<br>404 Error </p>
+                    <a class="button button-primary error404" href="/" title="">Go Home <i class="fa fa-home"></i></a>
                 {% else %}
-                    Interests: Computer Vision, Machine Learning, Robotics, Visualization
+                    <p class="intro-text"> Interests: Computer Vision, Machine Learning, Robotics, Visualization </p>
+                    <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
                 {% endif %}
-                </p>
 
-                <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
 
             </div>
 
