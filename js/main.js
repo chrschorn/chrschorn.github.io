@@ -26,7 +26,7 @@
 
 
    /* Insert email & phone */
-    var email = "christoph" + "." + "schorn" + "@" + "gmail.com";
+    var email = "christoph" + "@" + "schorn" + ".me";
 
 	$("a.insertemail").html(email).attr('href', 'mailto:' + email);
 	$("a.insertmailto").attr('href', 'mailto:' + email);
