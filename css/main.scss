@@ -41,6 +41,8 @@
 $primary-color: #0066ff;
 $primary-color-dark: #0055cc;
 $button-color: #0044bb;
+$intro-primary-color: #333333;
+$intro-secondary-color: #888888;
 
 @mixin button-arrow {
 	display: inline-block;
@@ -475,7 +477,7 @@ img.pull-left {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #151515;
+	background: #dddddd;
 	z-index: 800;
 	height: 100%;
 	width: 100%;
@@ -494,9 +496,9 @@ img.pull-left {
 }
 #loader:before {
 	content: "";
-	border-top: 11px solid rgba(255, 255, 255, 0.1);
-	border-right: 11px solid rgba(255, 255, 255, 0.1);
-	border-bottom: 11px solid rgba(255, 255, 255, 0.1);
+	border-top: 11px solid rgba(0, 0, 0, 0.1);
+	border-right: 11px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 11px solid rgba(0, 0, 0, 0.1);
 	border-left: 11px solid $primary-color;
 	-webkit-animation: load 1.1s infinite linear;
 	animation: load 1.1s infinite linear;
@@ -1120,7 +1122,7 @@ header .row {
 }
 header .top-bar {
 	display: block;
-	background: #000000;
+	background: $intro-primary-color;
 	min-width: 220px;
 	min-height: 66px;
 	position: absolute;
@@ -1252,7 +1254,7 @@ header .logo a {
 
 /* dropdown nav */
 .main-navigation {
-	background: #000000;
+	background: $intro-primary-color;
 	padding: 15px 30px 30px;
 	margin: 0;
 	width: 100%;
@@ -1336,8 +1338,6 @@ header .logo a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #111111;
-	opacity: .65;
 }
 
 .intro-content {
@@ -1349,7 +1349,7 @@ header .logo a {
 	transform: translateY(-2.1rem);
 }
 .intro-content h1 {
-	color: #FFFFFF;
+	color: $intro-primary-color;
 	font-family: "poppins-medium", sans-serif;
 	font-size: 8.4rem;
 	line-height: 1.071;
@@ -1358,7 +1358,7 @@ header .logo a {
 	margin-bottom: .6rem;
 	margin-left: auto;
 	margin-right: auto;
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
 	color: $primary-color;
@@ -1368,7 +1368,7 @@ header .logo a {
 	margin-bottom: 0;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .intro-content .intro-position {
 	font-family: "lora-regular", serif;
@@ -1376,7 +1376,7 @@ header .logo a {
 	line-height: 2.4rem;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
-	color: #FFFFFF;
+	color: $intro-primary-color;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position span {
@@ -1387,18 +1387,18 @@ header .logo a {
 	text-align: center;
 	display: inline-block;
 	padding: 0 8px 0 14px;
-	color: rgba(255, 255, 255, 0.3);
+	color: $intro-primary-color;
 }
 .intro-content .intro-position span:first-child::before {
 	content: "|";
 	text-align: center;
 	display: inline-block;
 	padding: 0 14px 0 8px;
-	color: rgba(255, 255, 255, 0.3);
+	color: $intro-primary-color;
 }
 .intro-content .button {
-	color: #FFFFFF !important;
-	border-color: rgba(255, 255, 255, 0.3);
+	color: $intro-primary-color !important;
+	border-color: $intro-secondary-color;
 	height: 6rem !important;
 	line-height: 5.4rem !important;
 	padding: 0 3.5rem 0 3rem !important;
@@ -1417,7 +1417,7 @@ header .logo a {
     font-family: "lora-regular", serif;
     font-size: 2rem;
     line-height: 1.8;
-    color: #999999;
+    color: #888888;
 }
 
 .intro-social {
@@ -1436,7 +1436,7 @@ header .logo a {
 	padding: 0;
 }
 .intro-social li a, .intro-social li a:visited {
-	color: #FFFFFF;
+	color: $intro-secondary-color;
 }
 .intro-social li a:hover, .intro-social li a:focus {
 	color: $button-color;
