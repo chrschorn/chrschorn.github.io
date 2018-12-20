@@ -1,28 +1,10 @@
-<!-- footer
-================================================== -->
+<footer class="footer">
 
-<footer>
-    <div class="row">
+	{% include socials.html %}
 
-        <div class="col-five tab-full pull-right social">
+	<div class="footer__copyright">
+		<span>© {{ 'now' | date: "%Y" }} {{ site.data.settings.basic_settings.site_title }}</span>
+		<a href="https://jekyllthemes.io" target="_blank">Jekyll Themes</a>
+	</div>
 
-            <ul class="footer-social">
-                {% include socials.html %}
-            </ul>
-
-        </div>
-
-        <div class="col-seven tab-full">
-            <div class="copyright">
-                <span>© Copyright {{ 'now' | date: "%Y" }} {{ site.fullname }}.</span>
-                <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
-                <span>Background by <a href="https://www.freepik.com/free-photos-vectors/background">Creative_hat</a></span>
-            </div>
-        </div>
-
-        <div id="go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-        </div>
-
-    </div> <!-- /row -->
 </footer>

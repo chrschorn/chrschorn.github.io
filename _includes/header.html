@@ -1,24 +1,35 @@
-<!-- header
-================================================== -->
-<header>
-    <div class="row">
+<header class="header">
 
-        <div class="top-bar">
-            <a class="menu-toggle" href="#"><span>Menu</span></a>
+	<div class="wrap">
 
-            <div class="logo">
-                <a href="/">{{ site.logotitle }}</a>
-            </div>
+		{% if site.data.settings.header_settings.avatar_image %}
+		<a href="/" class="header__avatar">
+			<img src="{{ site.data.settings.header_settings.avatar_image }}" class="header__avatar__img">
+		</a>
+		{% endif %}
 
-            <nav id="main-nav-wrap">
-                <ul class="main-navigation">
-                    <li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-                    <li><a class="smoothscroll"  href="#about" title="">About</a></li>
-                    <li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
-                    <li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>
-                </ul>
-            </nav>
-        </div> <!-- /top-bar -->
+		{% if site.data.settings.header_settings.logo_image %}
+		<a href="/" class="header__logo">
+			<img src="{{ site.data.settings.header_settings.logo_image }}" class="header__logo__img">
+		</a>
+		{% else %}
+		<a href="/" class="header__title">
+			{{ site.data.settings.basic_settings.site_title }}
+		</a>
+		{% endif %}
 
-    </div> <!-- /row -->
-</header> <!-- /header -->
+		<p class="header__tagline">{{ site.data.settings.basic_settings.site_tagline }}</p>
+
+		<div class="menu">
+			<ul class="menu__list">
+				{% for item in site.data.settings.menu_settings.menu_items %}
+				<li class="menu__list__item">
+					<a href="{{ item.url }}" class="menu__list__item__link">{{ item.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+
+	</div>
+
+</header>

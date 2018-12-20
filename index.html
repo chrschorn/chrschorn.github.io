@@ -1,63 +1,55 @@
 ---
-layout: home
+layout: default
+title: A super simple blogging theme for Jekyll.
+description: Simples is a super simple blogging theme for Jekyll.
+featured_image: /images/social.jpg
 ---
 
+<section class="listing single">
 
-<section id="about">
+	<div class="wrap">
 
-    <div class="row section-intro">
-        <div class="col-twelve">
+		{% for post in paginator.posts %}
 
-            <h5>About</h5>
-            <h1>Let me introduce myself.</h1>
+		<article class="listing-post">
 
-        <p class="lead">I'm Christoph Schorn, an electrical engineer majoring in computer engineering, software engineer and scholarship holder. I will finish my Master of Science in Sep 2018.<br><br>
-        Alongside my studies, I worked at different institutes of the RWTH Aachen University, thus aquiring substantial professional and personal experience in addition to my deep theoretical knowledge.
-            <br><br>I invite you to take a look at my achievements!
-            </p>
+			<div class="listing-post__header">
+				<h2 class="listing-post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<p class="listing-post__subtitle">{{ post.date | date_to_long_string }}</p>
+			</div>
 
-        </div>
-    </div> <!-- /section-intro -->
+			{% if post.featured_image %}
+			<a href="{{ post.url }}" class="listing-post__image" style="background-image: url({{ post.featured_image  }});"></a>
+			{% endif %}
 
-    <div class="row button-section">
-        <div class="col-twelve">
-            <a href="#resume" title="View Resume" class="button smoothscroll button-primary resume">View Resume</a>
-            <a href="#contact" title="Contact Me" class="button stroke smoothscroll">Contact Me</a>
-        </div>
-    </div>
+			<div class="listing-post__content">
+				<p>{{ post.excerpt }}</p>
+				<p><a href="{{ post.url }}" class="button">Read More</a>
+			</div>
 
-</section> <!-- /process-->
+		</article>
 
-<!-- resume Section
-================================================== -->
-<section id="resume" class="grey-section">
+		{% endfor %}
 
-    <div class="row section-intro">
-        <div class="col-twelve">
+	</div>
 
-            <h5>Resume</h5>
-            <h1>Achievements, projects and experiences.</h1>
+</section>
 
-            <p class="lead">In this compact one-page resume, you can find some of my most defining achievements, projects and experiences.</p>
+{% if paginator.total_pages > 1 %}
 
-        </div>
-    </div> <!-- /section-intro-->
+<section class="pagination">
 
-    <div class="row resume-content">
-        <div class="col-twelve">
+	{% if paginator.previous_page %}
+	<div class="pagination__prev">
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+	</div>
+	{% endif %}
+	{% if paginator.next_page %}
+	<div class="pagination__next">
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	</div>
+	{% endif %}
 
-            <a class="button button-primary download" href="https://drive.google.com/uc?export=download&id={{ site.resumeid }}" title="Download Resume" download="Resume_Christoph_Schorn">
-                Download Resume <i class="fa fa-download"></i>
-            </a>
+</section>
 
-            <div class="pdf">
-                <iframe src="https://drive.google.com/file/d/{{ site.resumeid }}/preview"></iframe>
-            </div>
-
-            <a class="button" href="https://drive.google.com/uc?export=download&id={{ site.resumeid }}" title="Download Resume" download="Resume_Christoph_Schorn">
-                Download Resume <i class="fa fa-download"></i>
-            </a>
-        </div>
-    </div>
-
-</section> <!-- /features -->
+{% endif %}
