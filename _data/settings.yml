@@ -15,7 +15,7 @@ menu_settings:
     - title: 'Resume'
       url: '/resume'
     - title: 'Music'
-      url: '/music'
+      url: '/music/'
     - title: 'Contact'
       url: '/contact'
 
