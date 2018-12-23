@@ -7,6 +7,6 @@ subtitle: Achievements, projects and experiences.
 
 In this compact one-page resume, you can find some of my most defining achievements, projects and experiences.
 
-<div class="pdfviewer">
+<p class="pdfviewer">
     <iframe src="https://drive.google.com/file/d/1-5PWHb1MBZzUaCOnpgNPr1vlCBSg7x2T/preview"></iframe>
-</div>
+</p>
