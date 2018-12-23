@@ -98,9 +98,9 @@ font_settings:
     letter_spacing: 0
     line_height: 1.5
   menu:
-    small_size: 18
-    medium_size: 20
-    large_size: 22
+    small_size: 20
+    medium_size: 22
+    large_size: 24
     weight: 600
     letter_spacing: 0
   h1:
