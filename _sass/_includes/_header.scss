@@ -124,10 +124,28 @@
 	font-size: $menu-small;
 	font-weight: $menu-weight;
 	color: $text-dark-color;
-	border-bottom: 2px solid transparent;
+	transition: color .8s ease-in;
+	//border-bottom: 2px solid transparent;
 
 	&:hover {
 		color: $accent-color;
+		transition: color .3s ease;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		margin: auto;
+		margin-top: -2px;
+		height: 2px;
+		width: 0px;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+	}
+
+	&.active-link:after {
+		background-color: $accent-color;
+		width: 100%;
 	}
 
 	@include mq(tabletp) {
@@ -136,9 +154,5 @@
 
 	@include mq(laptop) {
 		font-size: $menu-large;
-	}
-	
-	&.active-link {
-		border-bottom-color: $accent-color;
 	}
 }
