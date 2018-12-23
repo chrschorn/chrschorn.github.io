@@ -1,6 +1,7 @@
 basic_settings:
   site_title: Christoph Schorn
   site_tagline: Deep Learning & Computer Vision Software Engineer
+  site_subtagline: "@ Robert Bosch Car Multimedia GmbH"
   favicon_image: /images/favicon.png
 
 header_settings:

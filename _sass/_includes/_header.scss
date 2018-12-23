@@ -89,6 +89,21 @@
 	}
 }
 
+.header__subtagline {
+	@extend .header__tagline;
+	margin-top: 0px;
+	font-size: $sitetagline-small * 0.8;
+	
+	@include mq(tabletp) {
+		margin-top: 0px;
+		font-size: $sitetagline-medium * 0.8;
+	}
+
+	@include mq(laptop) {
+		font-size: $sitetagline-large * 0.8;
+	}
+}
+
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Menu

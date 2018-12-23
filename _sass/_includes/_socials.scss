@@ -29,10 +29,10 @@
 	width: 30px;
 	height: 30px;
 	border-radius: 100%;
-	background: $text-light-color;
+	transition: all 0.8s ease-in;
+	
 	font-size: 17px;
 	line-height: 1;
-	color: $background-color;
 
 	@include mq(tabletp) {
 		width: 40px;
@@ -47,8 +47,22 @@
 		@include translate(-50%,-52%);
 	}
 
+	background: $text-light-color;
+	color: $background-color;
+
 	&:hover {
 		background: $accent-color;
 		color: $background-color;
+		transition: all 0.3s ease;
+	}
+
+	.socials__header & {
+		margin-top: 10px;
+		background: $background-color;
+		color: $text-light-color;
+
+		&:hover {
+			color: $accent-color;
+		}
 	}
 }

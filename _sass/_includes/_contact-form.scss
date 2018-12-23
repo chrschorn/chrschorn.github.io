@@ -49,6 +49,10 @@
 	&:first-child {
 		margin-top: 0;
 	}
+
+	&.submit {
+		text-align: center;
+	}
 }
 
 .contact-form__item--error {
