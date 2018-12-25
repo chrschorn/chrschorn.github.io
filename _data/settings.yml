@@ -3,6 +3,7 @@ basic_settings:
   site_tagline: Deep Learning & Computer Vision Software Engineer
   site_subtagline: "@ Robert Bosch Car Multimedia GmbH"
   favicon_image: /images/favicon.png
+  resume_id: 1-5PWHb1MBZzUaCOnpgNPr1vlCBSg7x2T
 
 header_settings:
   avatar_image: /images/avatar.jpg
