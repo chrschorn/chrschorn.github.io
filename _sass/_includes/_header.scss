@@ -66,31 +66,35 @@ $_avatar_width_medium: 100px;
 		// transform: scale(1.5);
 
 		z-index: -1;
-		stroke: $accent-color;
+		stroke: $background-color;
 		stroke-dasharray: $full;
 		stroke-dashoffset: $half;
 	
 		@include transform-origin(50% 50%);
 		@include rotate(-90);
 
-		@include animation("stroke 0.8s ease-in-out forwards");
+		@include animation(stroke 0.7s ease-in-out 0s forwards);
 		
 		// Cirlce animation around the avatar, parametrized for a scale parameter (different avatar size).
 		// scale=1 uses the predefined circle radius (50px = width 100px)
 		@mixin circle-animation($scale) {
 			0% {
 				stroke-dashoffset: $full;
+				stroke: $accent-color;
 				@include transform(rotate(-90deg) scale($scale));
 			}
 			50% {
 				stroke-dashoffset: 0;
+				stroke: $accent-color;
 				@include transform(rotate(-270deg) scale($scale));
 			}
 			50.1% {
+				stroke: $accent-color;
 				@include transform(rotate(-90deg) scale($scale));
 			}
 			100% {
 				stroke-dashoffset: $full;
+				stroke: $accent-color;
 				@include transform(rotate(90deg) scale($scale));
 			}
 		}

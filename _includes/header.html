@@ -12,23 +12,23 @@
 		{% endif %}
 
 		{% if site.data.settings.header_settings.logo_image %}
-		<a href="/" class="header__logo">
+		<a href="/" class="header__logo loadin-1">
 			<img src="{{ site.data.settings.header_settings.logo_image }}" class="header__logo__img">
 		</a>
 		{% else %}
-		<a href="/" class="header__title">
+		<a href="/" class="header__title loadin-1">
 			{{ site.data.settings.basic_settings.site_title }}
 		</a>
 		{% endif %}
 
-		<p class="header__tagline">{{ site.data.settings.basic_settings.site_tagline }}</p>
-		<p class="header__subtagline">{{ site.data.settings.basic_settings.site_subtagline }}</p>
+		<p class="header__tagline loadin-2">{{ site.data.settings.basic_settings.site_tagline }}</p>
+		<p class="header__subtagline loadin-2">{{ site.data.settings.basic_settings.site_subtagline }}</p>
 
-		<div class="socials__header">
+		<div class="socials__header loadin-3">
 			{% include socials.html %}	
 		</div>
 
-		<div class="menu">
+		<div class="menu loadin-4">
 			<ul class="menu__list">
 				{% for item in site.data.settings.menu_settings.menu_items %}
 				<li class="menu__list__item">
