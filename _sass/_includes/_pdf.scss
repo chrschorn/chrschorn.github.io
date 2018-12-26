@@ -1,0 +1,43 @@
+.pdfviewer {
+	$ar: 1.45;  // aspect ratio
+
+	position: relative;
+	padding-top: 100% * $ar;
+
+	@include mq(tabletp) {
+	}
+
+	@include mq(tabletl) {
+		padding-top: 75% * $ar;
+	}
+
+	@include mq(laptop) {
+		padding-top: 70% * $ar;
+	}
+
+	@include mq(desktop) {
+		padding-top: 65% * $ar;
+		// max-width: 830px !important;
+	}
+	
+	height: 0;
+
+	// &:before {
+	// 	content: "";
+	// 	display: block;
+	// 	padding-top: 141%;
+	// }
+
+	iframe {
+		max-width: 830px;
+		max-height: 830px * $ar;
+      	width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

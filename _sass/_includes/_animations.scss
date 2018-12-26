@@ -1,0 +1,41 @@
+@include keyframes("loadin") {
+	0% {
+	  opacity: 0;
+	  @include transform(translateY(-15px));
+	}
+	50% {
+		color: $accent-color;
+	}
+	100% {
+	  opacity: 1;
+	  @include transform(translateY(0px));
+    }
+}
+
+
+$loadin-animation-duration: 0.5s;
+$loadin-stage-1: 0.35s;
+$loadin-stage-2: 0.5s;
+$loadin-stage-3: 0.6s;
+$loadin-stage-4: 0.7s;
+
+
+@mixin loadin($start) {
+    @include animation(loadin #{$loadin-animation-duration} ease-in-out #{$start} both);
+}
+
+.loadin-1 {
+	@include loadin($loadin-stage-1);
+}
+
+.loadin-2 {
+	@include loadin($loadin-stage-2);
+}
+
+.loadin-3, .loadin-3 .socials__item__link {
+	@include loadin($loadin-stage-3);
+}
+
+.loadin-4, .loadin-4 .menu__list__item__link {
+	@include loadin($loadin-stage-4);
+}

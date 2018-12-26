@@ -178,4 +178,9 @@ advanced_settings:
     </script>
   custom_styles: ""
   header_js: ""
-  footer_js: ""
+  footer_js: |
+    <script>
+      setTimeout(function() { $('[class*=loadin]').removeClass(function (index, css) {
+        return (css.match (/\bloadin-\S+/g) || []).join(' ');
+      });}, 1300);
+    </script>

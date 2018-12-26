@@ -6,7 +6,6 @@
 @import "_reset";
 @import "_mixins";
 @import "_plugins";
-@import "_custom";
 
 
 
@@ -131,6 +130,9 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 // - - - - - - - - - - Global styles
 
 @import "_basic";
+
+@import "_includes/_animations";
+@import "_includes/_pdf";
 
 @import "_includes/_header";
 @import "_includes/_footer";

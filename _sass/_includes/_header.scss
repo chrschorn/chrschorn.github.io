@@ -127,6 +127,9 @@ $_avatar_width_medium: 100px;
 }
 
 .header__title {
+	position: relative;
+	z-index: 1;
+	
 	font-family: $title-font;
 	font-size: $sitetitle-small;
 	font-weight: $sitetitle-weight;
