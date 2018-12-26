@@ -8,6 +8,9 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Header
 
+$_avatar_width_big: 150px;
+$_avatar_width_medium: 100px;
+
 .header {
 	padding-top: 30px;
 	text-align: center;
@@ -25,12 +28,14 @@
 	display: block;
 	margin: 0 auto 20px;
 	border-radius: 100%;
-	width: 100px;
+	width: $_avatar_width_medium;
 	overflow: hidden;
 	margin-bottom: 20px;
+	z-index: 1;
+	position: relative;
 
 	@include mq(tabletp) {
-		width: 150px;
+		width: $_avatar_width_big;
 		margin-bottom: 25px;
 	}
 
@@ -38,6 +43,73 @@
 		@include scale(1.05);
 	}
 }
+	
+.header__animation {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: -(100px - $_avatar_width_medium/2) auto;
+
+	@include mq(tabletp) {
+		margin: -(100px - $_avatar_width_big/2) auto;
+	}
+	
+	.circle {
+		$radius: 50;
+		$full: $radius * 2 * $pi;
+		$half: $full / 2;
+
+		// @include mq(tabletp) {
+		// 	@include scale(1.5);
+		// }
+	
+		// transform: scale(1.5);
+
+		z-index: -1;
+		stroke: $accent-color;
+		stroke-dasharray: $full;
+		stroke-dashoffset: $half;
+	
+		@include transform-origin(50% 50%);
+		@include rotate(-90);
+
+		@include animation("stroke 0.8s ease-in-out forwards");
+		
+		// Cirlce animation around the avatar, parametrized for a scale parameter (different avatar size).
+		// scale=1 uses the predefined circle radius (50px = width 100px)
+		@mixin circle-animation($scale) {
+			0% {
+				stroke-dashoffset: $full;
+				@include transform(rotate(-90deg) scale($scale));
+			}
+			50% {
+				stroke-dashoffset: 0;
+				@include transform(rotate(-270deg) scale($scale));
+			}
+			50.1% {
+				@include transform(rotate(-90deg) scale($scale));
+			}
+			100% {
+				stroke-dashoffset: $full;
+				@include transform(rotate(90deg) scale($scale));
+			}
+		}
+
+		// the default animation at scale 1
+		@include keyframes(stroke) {
+			@include circle-animation(1.0);
+		}
+
+		// for bigger screens, use scale 1.5 (avatar width is 150px, so is the circle width at this cale)
+		@include mq(tabletp) {
+			@include keyframes(stroke) {
+				@include circle-animation(1.5);
+			}
+		}
+	}
+}
+
+
 
 .header__logo {
 	display: block;
