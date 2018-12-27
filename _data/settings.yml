@@ -182,5 +182,5 @@ advanced_settings:
     <script>
       setTimeout(function() { $('[class*=loadin]').removeClass(function (index, css) {
         return (css.match (/\bloadin-\S+/g) || []).join(' ');
-      });}, 1300);
+      });}, 1400);
     </script>

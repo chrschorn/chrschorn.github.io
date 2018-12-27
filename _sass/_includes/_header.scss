@@ -42,6 +42,8 @@ $_avatar_width_medium: 100px;
 	&:hover {
 		@include scale(1.05);
 	}
+
+	
 }
 	
 .header__animation {
@@ -78,37 +80,35 @@ $_avatar_width_medium: 100px;
 		// Cirlce animation around the avatar, parametrized for a scale parameter (different avatar size).
 		// scale=1 uses the predefined circle radius (50px = width 100px)
 		@mixin circle-animation($scale) {
-			0% {
-				stroke-dashoffset: $full;
-				stroke: $accent-color;
-				@include transform(rotate(-90deg) scale($scale));
-			}
-			50% {
-				stroke-dashoffset: 0;
-				stroke: $accent-color;
-				@include transform(rotate(-270deg) scale($scale));
-			}
-			50.1% {
-				stroke: $accent-color;
-				@include transform(rotate(-90deg) scale($scale));
-			}
-			100% {
-				stroke-dashoffset: $full;
-				stroke: $accent-color;
-				@include transform(rotate(90deg) scale($scale));
+			@include keyframes(stroke) {
+				0% {
+					stroke-dashoffset: $full;
+					stroke: $accent-color;
+					@include transform(rotate(-90deg) scale($scale*0.8));
+				}
+				50% {
+					stroke-dashoffset: 0;
+					stroke: $accent-color;
+					@include transform(rotate(-270deg) scale($scale));
+				}
+				50.1% {
+					stroke: $accent-color;
+					@include transform(rotate(-90deg) scale($scale));
+				}
+				100% {
+					stroke-dashoffset: $full;
+					stroke: $accent-color;
+					@include transform(rotate(90deg) scale($scale));
+				}
 			}
 		}
 
 		// the default animation at scale 1
-		@include keyframes(stroke) {
-			@include circle-animation(1.0);
-		}
+		@include circle-animation(1.0);
 
 		// for bigger screens, use scale 1.5 (avatar width is 150px, so is the circle width at this cale)
 		@include mq(tabletp) {
-			@include keyframes(stroke) {
-				@include circle-animation(1.5);
-			}
+			@include circle-animation(1.5);
 		}
 	}
 }
@@ -129,7 +129,7 @@ $_avatar_width_medium: 100px;
 .header__title {
 	position: relative;
 	z-index: 1;
-	
+
 	font-family: $title-font;
 	font-size: $sitetitle-small;
 	font-weight: $sitetitle-weight;
