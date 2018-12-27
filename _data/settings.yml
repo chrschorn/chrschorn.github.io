@@ -180,7 +180,12 @@ advanced_settings:
   header_js: ""
   footer_js: |
     <script>
-      setTimeout(function() { $('[class*=loadin]').removeClass(function (index, css) {
-        return (css.match (/\bloadin-\S+/g) || []).join(' ');
-      });}, 1400);
+      $(document).ready(function() {
+        $loadins = $('[class*=loadin]').find('*');
+        $loadins.addClass("animate");
+        
+        setTimeout(function() { $loadins.removeClass(function (index, css) {
+          return (css.match (/\bloadin-\S+/g) || css.match (/\banimate-\S+/g) || []).join(' ');
+        });}, 1400);
+      });
     </script>

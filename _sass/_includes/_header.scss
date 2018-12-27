@@ -55,17 +55,11 @@ $_avatar_width_medium: 100px;
 	@include mq(tabletp) {
 		margin: -(100px - $_avatar_width_big/2) auto;
 	}
-	
-	.circle {
+
+	.loadin-circle {
 		$radius: 50;
 		$full: $radius * 2 * $pi;
 		$half: $full / 2;
-
-		// @include mq(tabletp) {
-		// 	@include scale(1.5);
-		// }
-	
-		// transform: scale(1.5);
 
 		z-index: -1;
 		stroke: $background-color;
@@ -75,13 +69,16 @@ $_avatar_width_medium: 100px;
 		@include transform-origin(50% 50%);
 		@include rotate(-90);
 
-		@include animation(stroke 0.7s ease-in-out 0s forwards);
-		
+		@include loadin-animation {
+			@include animation(stroke 0.7s ease-in-out 0s forwards);
+		}
+
 		// Cirlce animation around the avatar, parametrized for a scale parameter (different avatar size).
 		// scale=1 uses the predefined circle radius (50px = width 100px)
 		@mixin circle-animation($scale) {
 			@include keyframes(stroke) {
 				0% {
+					opacity: 1;
 					stroke-dashoffset: $full;
 					stroke: $accent-color;
 					@include transform(rotate(-90deg) scale($scale*0.8));
@@ -96,6 +93,7 @@ $_avatar_width_medium: 100px;
 					@include transform(rotate(-90deg) scale($scale));
 				}
 				100% {
+					opacity: 1;
 					stroke-dashoffset: $full;
 					stroke: $accent-color;
 					@include transform(rotate(90deg) scale($scale));
