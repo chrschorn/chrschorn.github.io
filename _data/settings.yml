@@ -12,7 +12,7 @@ header_settings:
 
 menu_settings:
   menu_items:
-    - title: 'About'
+    - title: 'Home'
       url: '/'
     - title: 'Resume'
       url: '/resume'
@@ -51,7 +51,7 @@ social_settings:
   email_url: 
     type: fas
     icon: paper-plane
-    link: 'mailto:<empty>'
+    link: 'mailto'
   papers_url: 
     type: fas
     icon: scroll
@@ -187,5 +187,9 @@ advanced_settings:
         setTimeout(function() { $loadins.removeClass(function (index, css) {
           return (css.match (/\bloadin-\S+/g) || css.match (/\banimate-\S+/g) || []).join(' ');
         });}, 1400);
+
+        var email = "christoph" + "@" + "schorn" + ".me";
+        $("a.insertemail").html(email).attr('href', 'mailto:' + email);
+        $("a[href='mailto']").attr('href', 'mailto:' + email);
       });
     </script>
