@@ -1,5 +1,5 @@
 ---
-title: Resume
+title: Résumé
 description: Achievements, projects and experiences.
 subtitle: Achievements, projects and experiences.
 #featured_image: /images/social.jpg
