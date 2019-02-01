@@ -14,8 +14,6 @@ menu_settings:
   menu_items:
     - title: 'Home'
       url: '/'
-    - title: 'Résumé'
-      url: '/resume'
     - title: 'Music'
       url: '/music/'
     - title: 'Contact'
