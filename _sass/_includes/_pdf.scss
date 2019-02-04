@@ -4,6 +4,9 @@
 	position: relative;
 	padding-top: 100% * $ar;
 
+	max-width: 830px;
+	max-height: 830px * $ar;
+
 	@include mq(tabletp) {
 	}
 
@@ -15,9 +18,8 @@
 		padding-top: 70% * $ar;
 	}
 
-	@include mq(desktop) {
-		padding-top: 65% * $ar;
-		// max-width: 830px !important;
+	@media only screen and (min-width: 1466px) { 
+		padding-top: 830px * $ar;
 	}
 	
 	height: 0;
