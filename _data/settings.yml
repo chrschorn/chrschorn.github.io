@@ -49,10 +49,9 @@ social_settings:
   deviantart_url: ''
   email_url: 
     type: fas
-    icon: paper-plane
+    icon: at
     link: 'mailto'
   github_url: 'https://github.com/chrschorn'
-  instagram_url: 'https://www.instagram.com/chrschrn'
   reddit_url: ''
   flickr_url: ''
   etsy_url: ''
@@ -60,12 +59,13 @@ social_settings:
   soundcloud_url: ''
   spotify_url: ''
   bandcamp_url: ''
-  papers_url: 
+  linkedin_url: 'https://www.linkedin.com/in/christoph-schorn'
+  xing_url: 'https://xing.to/christoph-schorn'
+  instagram_url: 'https://www.instagram.com/chrschrn'
+  papers_url:
     type: fas
     icon: scroll
     link: 'https://scholar.google.de/citations?user=0PlA9CsAAAAJ'
-  linkedin_url: 'https://www.linkedin.com/in/christoph-schorn'
-  xing_url: 'https://xing.to/christoph-schorn'
 
 color_settings:
   background_color: '#212121'
