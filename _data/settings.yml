@@ -81,9 +81,9 @@ color_settings:
   error_color: '#D64541'
 
 font_settings:
-  font_embed: '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Open+Sans" rel="stylesheet">'
-  title_font: "'Nunito Sans', sans-serif"
-  body_font: "'Nunito Sans', sans-serif"
+  font_embed: '<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">'
+  title_font: "'Raleway', sans-serif"
+  body_font: "'Raleway', sans-serif"
   regular_weight: 400
   bold_weight: 600
   site_title:
