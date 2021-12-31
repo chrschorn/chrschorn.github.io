@@ -194,31 +194,3 @@ advanced_settings:
         $("a[href='mailto']").attr('href', 'mailto:' + email);
       });
     </script>
-
-    <script>
-      var target = document.body;
-      var execOnNextObservation = false;
-
-      function observationCallback() {
-          (function(){
-          var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-          i.src = "https://cdn.curator.io/published/cfadda0c-990f-4050-891b-f01c79e8a20b.js";
-          e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-          })();
-      }
-
-      var ob = new MutationObserver(function() {
-          if (execOnNextObservation && !target.classList.contains("loading"))
-          {
-              observationCallback();
-              execOnNextObservation = false;
-          } else if (target.classList.contains("loading")) {
-              execOnNextObservation = true;
-          }
-      });
-
-      ob.observe(target, {
-          attributes: true,
-          attributeFilter: ["class"]
-      });
-    </script>
