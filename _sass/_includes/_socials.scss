@@ -50,7 +50,7 @@
 		@include translate(-50%,-52%);
 	}
 
-	background: $text-light-color;
+	background: $socials-color;
 	color: $background-color;
 
 	&:hover {
@@ -62,7 +62,7 @@
 	.socials__header & {
 		margin-top: 10px;
 		background: $background-color;
-		color: $text-light-color;
+		color: $socials-color;
 
 		&:hover {
 			color: $accent-color;

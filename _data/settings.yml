@@ -68,20 +68,21 @@ social_settings:
   xing_url: 'https://xing.to/christoph-schorn'
 
 color_settings:
-  background_color: '#ffffff'
-  background_alt_color: '#f4f5f6'
-  text_dark_color: '#2A2F36'
-  text_medium_color: '#6C7A89'
-  text_light_color: '#ABB7B7'
-  accent_color: '#1e88e5'
-  border_color: '#c4d8ea'
+  background_color: '#212121'
+  background_alt_color: '#2c2c2c'
+  text_dark_color: '#ffffff'
+  text_medium_color: '#b7b7b7'
+  text_light_color: '#6a6a6a'
+  accent_color: '#0089ff'
+  socials-color: '#4c4c4c'
+  border_color: '#6c6c6c'
   overlay_background_color: '#161B21'
   overlay_text_color: '#ffffff'
   error_color: '#D64541'
 
 font_settings:
   font_embed: '<link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Open+Sans" rel="stylesheet">'
-  title_font: "'Open Sans', sans-serif"
+  title_font: "'Nunito Sans', sans-serif"
   body_font: "'Nunito Sans', sans-serif"
   regular_weight: 400
   bold_weight: 600
@@ -102,7 +103,7 @@ font_settings:
     small_size: 20
     medium_size: 22
     large_size: 24
-    weight: 600
+    weight: 100
     letter_spacing: 0
   h1:
     small_size: 27
