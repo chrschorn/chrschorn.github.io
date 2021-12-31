@@ -33,7 +33,6 @@ contact_settings:
 social_settings:
   facebook_url: ''
   twitter_url: ''
-  instagram_url: ''
   snapchat_url: ''
   youtube_url: ''
   google-plus_url: ''
@@ -52,11 +51,8 @@ social_settings:
     type: fas
     icon: paper-plane
     link: 'mailto'
-  papers_url: 
-    type: fas
-    icon: scroll
-    link: 'https://scholar.google.de/citations?user=0PlA9CsAAAAJ'
   github_url: 'https://github.com/chrschorn'
+  instagram_url: 'https://www.instagram.com/chrschrn'
   reddit_url: ''
   flickr_url: ''
   etsy_url: ''
