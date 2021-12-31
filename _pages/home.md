@@ -6,11 +6,28 @@ subtitle:
 permalink: ""
 ---
 
-<p align="center">
-I'm glad you're here. This little place is my digital business card <span>&ndash;</span> for now, at least. Since you're already here, take a look around and feel free to send me a <a href="/contact">mail</a>.
+<div align="center">
+<p>
+This is my digital business card <span>&ndash;</span> for now, at least. 
+<br>
+Since you're already here, take a look around and feel free to send me a <a href="/contact">mail</a>. 
 </p>
 
 <br>
+
+<p>
+My photography website &#8594; <a href="https://photos.schorn.me">photos.schorn.me</a>
+</p>
+</div>
+
+
+<div class="gallery" data-columns="3">
+    <img src="/images/photos/showcase-3.jpg">
+    <img src="/images/photos/showcase-1.jpg">
+    <img src="/images/photos/showcase-2.jpg">
+    <img src="/images/photos/showcase-5.jpg">
+    <img src="/images/photos/showcase-4.jpg">
+</div>
 
 <!-- <p class="pdfviewer">
     <iframe src="https://drive.google.com/file/d/{{ site.data.settings.basic_settings.resume_id }}/preview"></iframe>
