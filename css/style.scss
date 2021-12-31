@@ -27,6 +27,10 @@ $accent-color: {{ site.data.settings.color_settings.accent_color }};
 $socials-color: {{ site.data.settings.color_settings.socials-color }};
 $error-color: {{ site.data.settings.color_settings.error_color }};
 
+// Animiations
+
+$enable-load-animation: {{ site.data.settings.advanced_settings.enable_load_animation }};
+
 
 // Fonts
 

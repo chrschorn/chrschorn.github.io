@@ -12,24 +12,37 @@
     }
 }
 
+@include keyframes(loadin-opacity-only) {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
 
-$loadin-animation-duration: 0.5s;
-$loadin-stage-1: 0.35s;
-$loadin-stage-2: 0.5s;
-$loadin-stage-3: 0.6s;
-$loadin-stage-4: 0.7s;
-$loadin-stage-5: 0.8s;
+
+$loadin-animation-duration: 0.3s;
+$loadin-stage-1: 0.0s;
+$loadin-stage-2: 0.2s;
+$loadin-stage-3: 0.25s;
+$loadin-stage-4: 0.3s;
+$loadin-stage-5: 0.4s;
 
 @mixin loadin-animation {
-	opacity: 0;
-	&.animate {
-		@content
+	@if $enable-load-animation {
+		opacity: 0;
+		&.animate {
+			@content
+		}
 	}
 }
 
-@mixin loadin($start) {
+@mixin loadin($start, $duration: 0.3s) {
 	@include loadin-animation {
-		@include animation(loadin #{$loadin-animation-duration} ease-in-out #{$start} both);
+		@include animation(loadin #{$duration} ease-in-out #{$start} both);
+	}
+}
+
+@mixin loadin-opacity-only($start, $duration: 0.3s) {
+	@include loadin-animation {
+		@include animation(loadin-opacity-only #{$duration} ease-in-out #{$start} both);
 	}
 }
 
@@ -50,16 +63,16 @@ $loadin-stage-5: 0.8s;
 }
 
 .loadin-5 {
-    @include loadin($loadin-stage-5);
+    @include loadin-opacity-only($loadin-stage-5, 0.5s);
 
     h1, h2, h3, h4, h5, h6, p, .footer__copyright {
-        @include loadin($loadin-stage-5);
+        @include loadin-opacity-only($loadin-stage-5, 0.5s);
     }
 }
 
 .loadin-scale {
 	@include loadin-animation {
-		@include animation(scale-loadin 0.35s ease-in 0s forwards);
+		@include animation(scale-loadin 0.30s ease-in 0s forwards);
 	}
 	
 	// the default animation at scale 1

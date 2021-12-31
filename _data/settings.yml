@@ -178,6 +178,7 @@ advanced_settings:
       gtag('config', 'UA-80555380-2');
     </script>
   custom_styles: ""
+  enable_load_animation: true
   header_js: ""
   footer_js: |
     <script>
