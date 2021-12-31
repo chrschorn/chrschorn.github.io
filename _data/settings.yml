@@ -60,6 +60,10 @@ social_settings:
   soundcloud_url: ''
   spotify_url: ''
   bandcamp_url: ''
+  papers_url: 
+    type: fas
+    icon: scroll
+    link: 'https://scholar.google.de/citations?user=0PlA9CsAAAAJ'
   linkedin_url: 'https://www.linkedin.com/in/christoph-schorn'
   xing_url: 'https://xing.to/christoph-schorn'
 
