@@ -18,12 +18,12 @@
 }
 
 
-$loadin-animation-duration: 0.3s;
-$loadin-stage-1: 0.0s;
-$loadin-stage-2: 0.2s;
-$loadin-stage-3: 0.25s;
-$loadin-stage-4: 0.3s;
-$loadin-stage-5: 0.4s;
+$loadin-animation-duration: 0.4s;
+$loadin-stage-1: 0.4s;
+$loadin-stage-2: 0.45s;
+$loadin-stage-3: 0.5s;
+$loadin-stage-4: 0.55s;
+$loadin-stage-5: 0.6s;
 
 @mixin loadin-animation {
 	@if $enable-load-animation {
@@ -63,16 +63,16 @@ $loadin-stage-5: 0.4s;
 }
 
 .loadin-5 {
-    @include loadin-opacity-only($loadin-stage-5, 0.5s);
+    @include loadin-opacity-only($loadin-stage-5, 0.6s);
 
     h1, h2, h3, h4, h5, h6, p, .footer__copyright {
-        @include loadin-opacity-only($loadin-stage-5, 0.5s);
+        @include loadin-opacity-only($loadin-stage-5, 0.6s);
     }
 }
 
 .loadin-scale {
 	@include loadin-animation {
-		@include animation(scale-loadin 0.30s ease-in 0s forwards);
+		@include animation(scale-loadin 0.35s ease-in 0.1s forwards);
 	}
 	
 	// the default animation at scale 1
