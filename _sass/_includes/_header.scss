@@ -70,7 +70,7 @@ $_avatar_width_medium: 100px;
 		@include rotate(-90);
 
 		@include loadin-animation {
-			@include animation(stroke 0.7s ease-in-out 0s forwards);
+			@include animation(stroke 0.7s ease-in-out 0.1s forwards);
 		}
 
 		// Cirlce animation around the avatar, parametrized for a scale parameter (different avatar size).
@@ -135,8 +135,11 @@ $_avatar_width_medium: 100px;
 	line-height: 1;
 	color: $text-dark-color;
 
+	@include transition(color 0.8s ease-in);
+
 	&:hover {
 		color: $accent-color;
+		@include transition(color 0.3s ease-in);
 	}
 
 	@include mq(tabletp) {
