@@ -16,7 +16,7 @@ Since you're already here, take a look around and feel free to send me a <a href
 <br>
 
 <p>
-My photography website &#8594; <a href="https://photos.schorn.me">photos.schorn.me</a>
+My photography website: <a href="https://photos.schorn.me">photos.schorn.me</a>
 </p>
 </div>
 
