@@ -13,13 +13,21 @@ This is my digital business card <span>&ndash;</span> for now, at least.
 Since you're already here, take a look around and feel free to send me a <a href="/contact">mail</a>. 
 </p>
 
+<p>
+<i class="fab fa-linkedin"></i>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/christoph-schorn/">LinkedIn</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<i class="fab fa-xing"></i>&nbsp;&nbsp;<a href="https://www.xing.com/profile/Christoph_Schorn4/cv">Xing</a>
+</p>
+
 <br>
 
 <p>
-My photography website: <a href="https://photos.schorn.me">photos.schorn.me</a>
+My photography website
+<br>
+<i class="fas fa-camera"></i>&nbsp;&nbsp;<a href="https://photos.schorn.me">photos.schorn.me</a>
 </p>
-</div>
 
+
+</div>
+      
 
 <div class="gallery" data-columns="3">
     <img src="/images/photos/showcase-3.jpg">
