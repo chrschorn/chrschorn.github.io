@@ -1,0 +1,98 @@
+---
+layout: default
+---
+
+<script>
+  function openMailTab() {
+    // spam protection
+    var encoded = "Y2hyaXN0b3BoQHNjaG9ybi5tZQ==";
+    window.open("mailto:" + atob(encoded), '_blank');
+  }
+</script>
+
+{{ content }}
+
+<section class="hero is-fullheight">
+
+  <div class="hero-body">
+    <div class="container mb-6">
+      <div class="columns is-vcentered is-variable is-8">
+        <div class="column mr-5 is-half is-hidden-touch">
+          <!-- <div class="cover-image shadow"></div> -->
+          <img class="cover-image shadow" src="{{ '/images/cover-image.jpg' | relative_url }}">
+        </div>
+        <div class="column">
+
+          <div id="avatar" class="block center-on-mobile">
+            <figure class="image is-square">
+              <img class="is-rounded shadow" src="{{ '/images/avatar.jpg' | relative_url }}">
+            </figure>
+          </div>
+
+          <div class="block">
+
+            <div class="box shadow center-on-mobile">
+              <h1 class="title">
+                Christoph Schorn
+              </h1>
+              
+              <p class="subtitle mb-5">
+                Software Engineer <span class="spacer">|</span> Photographer <span class="spacer">|</span> Musician
+              </p>
+
+              <div class="columns center-on-mobile has-text-left">
+                <div class="column is-one-quarter-tablet is-one-third-desktop">
+                  <ul class="fa-ul is-size-6">
+                    <li><span class="fa-li"><i class="fa-brands fa-linkedin"></i></span>
+                      <a href="https://www.linkedin.com/in/christoph-schorn/" target="_blank" title="LinkedIn">LinkedIn</a>
+                    </li>
+                    <li><span class="fa-li"><i class="fa-brands fa-github"></i></span>
+                      <a href="https://github.com/chrschorn" target="_blank" title="GitHub">GitHub</a>
+                    </li>
+                    <li><span class="fa-li"><i class="fa-solid fa-scroll"></i></span>
+                      <a href="https://scholar.google.de/citations?user=0PlA9CsAAAAJ" target="_blank" title="Google Scholar">Papers</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="column is-one-quarter-tablet is-one-third-desktop">
+                  <ul class="fa-ul is-size-6">
+                    <li><span class="fa-li"><i class="fa-solid fa-camera"></i></span>
+                      <a href="https://photos.schorn.me/" target="_blank" title="Photography">Photography</a>
+                    </li>
+                    <li><span class="fa-li"><i class="fa-brands fa-instagram"></i></span>
+                      <a href="https://www.instagram.com/chrschrn/" target="_blank" title="Instagram">Instagram</a>
+                    </li>
+                    <li><span class="fa-li"><i class="fa-solid fa-music"></i></span>
+                      <a href="https://www.funkforce5.de/" target="_blank" title="Band">Band</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block pt-2">
+            <div class="buttons shadow center-on-mobile">
+              <button class="button is-primary is-rounded" onclick="openMailTab()">
+                <span class="icon">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </span>
+                <span>Email</span>
+              </button>
+
+              <a class="button is-light is-rounded ml-3" href="https://drive.google.com/file/d/196tVqh8mFNnRcx2HIHzA2vJEyhMCA4im/view" target="_blank" title="Resume">
+                <span class="icon">
+                  <i class="fa-solid fa-file-text"></i>
+                </span>
+                <span>Resume</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
